@@ -11,4 +11,6 @@ class Task(models.Model):
     due_date = models.DateTimeField()
 
     def __str__(self):
-        return f'[{self.title}]-[{self.due_date}]-[{self.completed}]'
+        status = 'completed' if self.completed else 'not completed'
+        string = f'[Title: {self.title}] - [Due Date: {self.due_date.strftime("%d/%m/%Y, %H:%M:%S")}] - [{status}]'
+        return string
