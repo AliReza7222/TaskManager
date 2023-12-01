@@ -9,4 +9,3 @@ class Task(models.Model):
     description = models.TextField()
     completed = models.BooleanField(default=False)
     due_date = models.DateTimeField()
-
