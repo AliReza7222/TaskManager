@@ -23,6 +23,8 @@ class TaskAdmin(admin.ModelAdmin):
         'mark_to_completed',
         'mark_to_not_completed'
     ]
+    search_fields = ('title__startswith', )
+    search_help_text = "notice : search task's title ."
 
     # action for mark to completed task .
     def mark_to_completed(self, request, queryset):
