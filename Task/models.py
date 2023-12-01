@@ -9,3 +9,6 @@ class Task(models.Model):
     description = models.TextField()
     completed = models.BooleanField(default=False)
     due_date = models.DateTimeField()
+
+    def __str__(self):
+        return f'[{self.title}]-[{self.due_date}]-[{self.completed}]'
