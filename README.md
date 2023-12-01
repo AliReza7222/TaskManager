@@ -69,6 +69,8 @@ Accounts :
 
 Task :
 <p>This application is for create task and manage tasks . </p>
+<p>model task registered in admin panel and customize admin panel </p>
 
 <h3>Model User and Task :</h3>
 
+![image_database](https://github.com/AliReza7222/TaskManager/blob/main/image_database/drawSQL-task-manager-export-2023-12-01.png)
