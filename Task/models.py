@@ -1,9 +1,15 @@
+import uuid
 from django.db import models
 
 from .validators import check_text
 
 
 class Task(models.Model):
+    id = models.UUIDField(
+        default=uuid.uuid4,
+        primary_key=True,
+        editable=False
+    )
     title = models.CharField(unique=True, validators=[check_text], max_length=150,
                              help_text='Your title should contain words, numbers and _ and start with words.')
     description = models.TextField()
