@@ -57,3 +57,18 @@ python manage.py createsuperuser
 ```bash
 python manage.py runserver
 ```
+
+
+
+## About Project
+This project is for management tasks and created two app with names task and accounts.
+
+Accounts :
+<p>This application is for user registration , login, authentication user and includes a custom user model.</p>
+
+
+Task :
+<p>This application is for create task and manage tasks . </p>
+
+<h3>Model User and Task :</h3>
+
