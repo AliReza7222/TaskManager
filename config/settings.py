@@ -77,7 +77,6 @@ TEMPLATES = [
 WSGI_APPLICATION = "config.wsgi.application"
 
 # Config User
-
 AUTH_USER_MODEL = 'accounts.User'
 
 # Database
