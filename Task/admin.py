@@ -44,3 +44,17 @@ class TaskAdmin(admin.ModelAdmin):
     mark_to_not_completed.short_description = 'mark task for not completion'
     mark_to_completed.short_description = 'mark task for completion'
 
+    # add a summary of complete or not complete task
+    def changelist_view(self, request, extra_context=None):
+        extra_context = extra_context or {}
+
+        # Calculate the number of completed and not completed tasks
+        completed_count = Task.objects.filter(completed=True).count()
+        not_completed_count = Task.objects.filter(completed=False).count()
+
+        # Add the counts to extra_context
+        extra_context['completed_count'] = completed_count
+        extra_context['not_completed_count'] = not_completed_count
+
+        return super().changelist_view(request, extra_context=extra_context)
+
